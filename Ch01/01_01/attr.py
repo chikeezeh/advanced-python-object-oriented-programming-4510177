@@ -49,3 +49,4 @@ print(find_attribute(a1, 'version'))
 
 #%% a1.nic
 print(find_attribute(a1, 'nic'))
+# %%
