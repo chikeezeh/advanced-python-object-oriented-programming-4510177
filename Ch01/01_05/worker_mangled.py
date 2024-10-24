@@ -29,3 +29,5 @@ print(f'uptime: {worker.uptime():.2f}')
 
 # %%
 print(worker.__dict__)
+
+# %%
