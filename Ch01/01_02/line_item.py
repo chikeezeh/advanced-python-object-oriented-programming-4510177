@@ -14,16 +14,18 @@ class LineItem:
         return self._sku
     
     @sku.setter  # Setter.
-    def sku(self, value):
-        value = value.strip()
-        if not value:
-            raise ValueError(f'empty sku: {value!r}')
-        self._sku = value
+    def sku(self, newsku):
+        newsku = newsku.strip()
+        if not newsku:
+            raise ValueError(f'empty sku: {newsku!r}')
+        self._sku = newsku
 
 
 # %% Test
-li = LineItem('esp32', 1.34, 10)
+li = LineItem('ade', 1.34, 10)
 print(li.value)
 
 # %% Invalid SKU
-li.sku = ' '
+# li.sku = ''
+# print(li.sku)
+# %%
