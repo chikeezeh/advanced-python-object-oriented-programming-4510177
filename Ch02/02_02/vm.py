@@ -10,7 +10,7 @@ class VM:
         self.name = VM.random_name()
 
 
-    @staticmethod
+    @staticmethod #can be used on all objects
     def random_name():
         adjective, name = choice(adjectives), choice(names)
         return f'{adjective}_{name}'
@@ -19,3 +19,5 @@ class VM:
 # %% Test
 vm = VM()
 print(vm.name)
+
+# %%
