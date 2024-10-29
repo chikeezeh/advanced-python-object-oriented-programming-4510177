@@ -39,7 +39,13 @@ class Stack(Sequence):
             raise IndexError(index)
         return node.value
 
-
+    def __str__(self) -> str:
+        values = []
+        node = self._head
+        while node:
+            values.append(str(node.value))
+            node = node.next
+        return " -> ".join(values) if values else "Empty Stack"
 
 # %% Test
 s = Stack()
@@ -48,3 +54,5 @@ for c in 'Python':
 print('len:', len(s))
 print('s[2]:', s[2])
 print('t' in s)
+
+# %%

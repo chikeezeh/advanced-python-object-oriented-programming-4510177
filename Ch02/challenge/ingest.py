@@ -1,8 +1,12 @@
 # %% Events
-class LoginEvent:
+from abc import ABC, abstractmethod
+from typing import Protocol
+
+class LoginEvent(ABC):
     def __init__(self, login):
         self.login = login
 
+    @abstractmethod
     def notify_loaded(self):
         print('LoginEvent loaded')
 
