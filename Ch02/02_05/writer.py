@@ -17,7 +17,7 @@ def store_json(w: Writer, obj: dict) -> None:
 
 # %% S3File
 class S3File:
-    def write(self, data: str) -> None:
+    def write(self, data: bytes) -> None:
         # TODO
         print(f's3: write: {data!r}')
 
@@ -30,3 +30,5 @@ obj = {
     'lng': -0.1270605,
 }
 store_json(out, obj)
+
+# %%
